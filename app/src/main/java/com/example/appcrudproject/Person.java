@@ -1,7 +1,7 @@
 package com.example.appcrudproject;
 
-public class Person {
-    private int Id;
+public class Person extends Entity{
+
     private String Name;
     private String Address;
     private String PhoneNumber;
@@ -9,7 +9,7 @@ public class Person {
     private boolean IsFavorite;
 
     public Person(int id, String name, String address, String phoneNumber, String note, boolean isFavorite) {
-        Id = id;
+       super(id);
         Name = name;
         Address = address;
         PhoneNumber = phoneNumber;
@@ -17,13 +17,7 @@ public class Person {
         IsFavorite = isFavorite;
     }
 
-    public int getId() {
-        return Id;
-    }
 
-    public void setId(int id) {
-        Id = id;
-    }
 
     public String getName() {
         return Name;
