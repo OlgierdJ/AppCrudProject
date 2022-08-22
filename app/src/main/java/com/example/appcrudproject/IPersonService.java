@@ -1,6 +1,9 @@
 package com.example.appcrudproject;
 
 
+
+import com.example.appcrudproject.entities.Person;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -20,10 +23,10 @@ interface IPersonService {
     Call<Person> create(@Body Person user);
     @GET("/api/person")
     Call<List<Person>> get();
-    @POST("/api/person/{id}")
+    @GET("/api/person/{id}")
     Call<Person> get(@Path("id") String searchId);
     @PUT("/api/person")
     Call<Person> update(@Body Person user);
-    @DELETE("/api/person")
+    @DELETE("/api/person/{id}")
     Call<Person> delete(@Path("id") String searchId);
 }

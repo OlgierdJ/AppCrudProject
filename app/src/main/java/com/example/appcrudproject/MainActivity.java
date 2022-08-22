@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.StrictMode;
+
+import com.example.appcrudproject.entities.Person;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,7 +39,15 @@ public class MainActivity extends AppCompatActivity {
                 call.cancel();
             }
         });
-        /*Call<Person> call2 = _PService.create(new Person(0,"bob","bobstreet","28771104","he is bob",true));
+        /*
+        Person toC = new Person();
+        toC.setId(0);
+        toC.setName("bob");
+        toC.setEmail("bobstreet@atplace");
+        toC.setNote("he is bob");
+        toC.setFavorite(true);
+        toC.setPhoneNumber("28771104");
+        Call<Person> call2 = _PService.create(toC);
         call2.enqueue(new Callback<Person>() {
             @Override
             public void onResponse(Call<Person> call, Response<Person> response) {
@@ -47,34 +58,36 @@ public class MainActivity extends AppCompatActivity {
                 call.cancel();
             }
         });
-        Call<Person> call3 = _PService.get(Integer.toString(People.get(0).getId()));
+
+         */
+        Call<Person> call3 = _PService.get("1");
         call3.enqueue(new Callback<Person>() {
             @Override
             public void onResponse(Call<Person> call, Response<Person> response) {
                 PersonById = response.body();
-            }
-            @Override
-            public void onFailure(Call<Person> call, Throwable t) {
-                call.cancel();
-            }
-        });
-        PersonById.setName("bobby");
-        Call<Person> call4 = _PService.update(PersonById);
-        call4.enqueue(new Callback<Person>() {
-            @Override
-            public void onResponse(Call<Person> call, Response<Person> response) {
-                UpdatedPerson = response.body();
-            }
-            @Override
-            public void onFailure(Call<Person> call, Throwable t) {
-                call.cancel();
-            }
-        });
-        Call<Person> call5 =_PService.delete(Integer.toString(People.get(0).getId()));
-        call5.enqueue(new Callback<Person>() {
-            @Override
-            public void onResponse(Call<Person> call, Response<Person> response) {
-                DeletedPerson = response.body();
+                PersonById.setName("bobby");
+                Call<Person> call4 = _PService.update(PersonById);
+                call4.enqueue(new Callback<Person>() {
+                    @Override
+                    public void onResponse(Call<Person> call, Response<Person> response) {
+                        UpdatedPerson = response.body();
+                        Call<Person> call5 =_PService.delete("1");
+                        call5.enqueue(new Callback<Person>() {
+                            @Override
+                            public void onResponse(Call<Person> call, Response<Person> response) {
+                                DeletedPerson = response.body();
+                            }
+                            @Override
+                            public void onFailure(Call<Person> call, Throwable t) {
+                                call.cancel();
+                            }
+                        });
+                    }
+                    @Override
+                    public void onFailure(Call<Person> call, Throwable t) {
+                        call.cancel();
+                    }
+                });
             }
             @Override
             public void onFailure(Call<Person> call, Throwable t) {
@@ -82,7 +95,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-         */
-        this._PService.hashCode();
+
+
+
+
+
+
+
+
+
+
     }
 }
