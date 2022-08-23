@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.StrictMode;
 
+import com.example.appcrudproject.activities.BaseActivity;
 import com.example.appcrudproject.entities.Person;
 
 import retrofit2.Call;
@@ -12,33 +13,30 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private IPersonService _PService;
-    private Person Created;
-    private Person PersonById;
-    private Person UpdatedPerson;
-    private Person DeletedPerson;
-    private List<Person> People;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
+        //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        //StrictMode.setThreadPolicy(policy);
+        /*
         _PService = APIClient.getClient().create(IPersonService.class);
         Call<List<Person>> call1 = _PService.get();
         call1.enqueue(new Callback<List<Person>>() {
             @Override
             public void onResponse(Call<List<Person>> call, Response<List<Person>> response) {
-                People = response.body();
-
+                List<Person> p = response.body();
             }
             @Override
             public void onFailure(Call<List<Person>> call, Throwable t) {
                 call.cancel();
             }
         });
+
+         */
         /*
         Person toC = new Person();
         toC.setId(0);
@@ -60,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
          */
+        /*
         Call<Person> call3 = _PService.get("1");
         call3.enqueue(new Callback<Person>() {
             @Override
@@ -97,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+         */
 
 
 
