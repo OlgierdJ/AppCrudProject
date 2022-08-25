@@ -1,8 +1,10 @@
 package com.example.appcrudproject.entities;
 
 
-public abstract class EntityBase {
-    private long id;
+import android.os.Parcelable;
+
+public abstract class EntityBase implements Parcelable {
+    protected long id;
 
     public long getId() {
         return id;

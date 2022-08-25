@@ -10,25 +10,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/updatePersonTxt"
+        android:text="@string/addPersonTxt"
         android:textSize="20dp"
         android:layout_marginTop="10dp" />
 
-    <TextView
-        android:id="@+id/viewId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editName"
+        android:id="@+id/addName"
+        android:text="@string/addPersonName"
         android:layout_marginTop="10dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editEmail"/>
+        android:id="@+id/addEmail"
+        android:text="@string/addPersonEmail"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,26 +37,28 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editchxBox" />
+            android:id="@+id/chxBox" />
     </LinearLayout>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editNumber"/>
+        android:id="@+id/addNumber"
+        android:text="@string/addPersonNumber" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editNote" />
+        android:id="@+id/addNote"
+        android:text="@string/addPersonNote" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dp">
         <Button
-            android:id="@+id/btnUpdatePers"
+            android:id="@+id/btnAddPers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btnUpdate"
+            android:text="@string/btnAdd"
             android:layout_weight="0.5"
             android:layout_margin="10dp"/>
         <Button
@@ -68,13 +66,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnCancel"
-            android:layout_weight="0.5"
-            android:layout_margin="10dp"/>
-        <Button
-            android:id="@+id/btnDeletePers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnDelete"
             android:layout_weight="0.5"
             android:layout_margin="10dp"/>
     </LinearLayout>

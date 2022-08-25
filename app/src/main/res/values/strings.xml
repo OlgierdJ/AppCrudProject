@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AppCrudProject</string>
+    <string name="addPersonTxt">New person</string>
+    <string name="updatePersonTxt">Edit person</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnAdd">Add</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete This</string>
+    <string name="addPersonNote">note</string>
+    <string name="addPersonNumber">number</string>
+    <string name="chxBox">Favorited</string>
+    <string name="addPersonEmail">email</string>
+    <string name="addPersonName">name</string>
+    <string name="personList">People</string>
+    <string name="ftbDesc">People</string>
 </resources>
